@@ -2,7 +2,7 @@ Board {
   constructor () {
     this.rows = 6;
     this.coloumns = 7;
-    this.spaces = createSpaces();
+    this.spaces = this.createSpaces();
   }
   createSpaces () {
     let spaces = [];
