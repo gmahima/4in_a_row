@@ -5,13 +5,17 @@ Board {
     this.spaces = createSpaces();
   }
   createSpaces () {
-    for (let i = 0; i < this.rows; i++) {
-      let spaces = new Array(this.rows);
-      spaces[i] = new Array(this.coloumns);
-      for (let j = 0; j < this.coloumns; j++) {
-      spaces[i][j] = new Space(i, j);
-
+    let spaces = [];
+    for (let i = 0; i < this.coloumns; i++) {
+      const coloumm = [];
+      for (let j = 0; j < this.rows; j++) {
+        const space = new Space(i, j)
+        coloumn.push(space);
       }
+      spaces.push(coloumn)
+
     }
+    return spaces;
+
   }
 }
