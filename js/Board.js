@@ -7,12 +7,12 @@ class Board {
   createSpaces () {
     let spaces = [];
     for (let i = 0; i < this.coloumns; i++) {
-      const coloumm = [];
+      const coloumn = [];
       for (let j = 0; j < this.rows; j++) {
-        const space = new Space(i, j)
+        const space = new Space(i, j);
         coloumn.push(space);
       }
-      spaces.push(coloumn)
+      spaces.push(coloumn);
 
     }
     return spaces;

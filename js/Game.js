@@ -5,10 +5,13 @@ class Game {
     this.ready = false;
   }
   createPlayers() {
-    players = [];
+    const players = [];
     players.push(new Player('Player1', 1,  '#e15258', true ));
     players.push(new Player('Player2', 2,  "#e59a13" ));
     return players;
+  }
+  get activePlayer() {
+    return this.players.find(player => player.active);
   }
   startGame() {
     this.board.drawHTMLBoard();
@@ -17,8 +20,6 @@ class Game {
 
 
   }
-  get activePlayer () {
-    this.players.find(player => player.active);
-  }
+
 
 }
