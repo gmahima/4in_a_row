@@ -20,6 +20,20 @@ class Game {
 
 
   }
+  handleKeydown(e) {
+    if (this.ready == true) {
+      if (e.key == "ArrowLeft") {
+console.log('i');
+      }
+      if (e.key == "ArrowRight") {
+console.log('ii');
+      }
+      if (e.key == "ArrowDown") {
+console.log('iii');
+      }
+    }
+
+  }
 
 
 }
