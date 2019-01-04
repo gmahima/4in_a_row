@@ -1,4 +1,4 @@
-Player {
+class Player {
   constructor (name, id, color, active = false) {
     this.name = name;
     this.id = id;
@@ -9,11 +9,18 @@ Player {
   createTokens(n) {
     for (let i = 0; i<number; i++) {
       const tokens = [];
-      let token = new Token(i, this)
+      let token = new Token(i, this);
       tokens.push(token);
-      return tokens
+      return tokens;
 
     }
+
+  }
+  get unusedTokens () {
+    return this.tokens.filter(token => token.dropped === false);
+  }
+  get activeToken () {
+    this.unusedTokens[0];
 
   }
 }
