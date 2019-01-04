@@ -10,4 +10,7 @@ Game {
     players.push(new Player('Player2', 2,  "#e59a13" ));
     return players;
   }
+  startGame() {
+    
+  }
 }
