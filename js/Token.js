@@ -27,7 +27,7 @@ class Token {
       /**
    * Moves html token one column to left.
    */
-    if (this.offsetLeft != 0) {
+    if (this.offsetLeft > 0) {
       this.htmlToken.style.left = this.offsetLeft - 76;
       this.coloumnLocation -= 1;
     }
@@ -38,7 +38,7 @@ class Token {
    * @param   {number}    columns - number of columns in the game board
    */
 
-    if (this.offsetLeft != (coloumns-1)*76) {
+    if (this.offsetLeft < (coloumns-1)*76) {
       this.htmlToken.style.left = this.offsetLeft + 76;
       this.coloumnLocation += 1;
     }
