@@ -29,18 +29,21 @@ class Token {
    */
     if (this.offsetLeft > 0) {
       this.htmlToken.style.left = this.offsetLeft - 76;
-      this.coloumnLocation -= 1;
+      this.columnLocation -= 1;
     }
   }
-  moveRight (coloumns) {
+  moveRight(columns) {
       /**
    * Moves html token one column to right.
    * @param   {number}    columns - number of columns in the game board
    */
-
-    if (this.offsetLeft < (coloumns-1)*76) {
+console.log(`columnLocation:${this.columnLocation}`);
+    if (this.columnLocation < (columns-1)) {
+      console.log(`offsetLeftBefore:${this.offsetLeft}`);
       this.htmlToken.style.left = this.offsetLeft + 76;
-      this.coloumnLocation += 1;
+      console.log(`offsetLeftAfter:${this.offsetLeft}`);
+      this.columnLocation += 1;
+      console.log(`columnLocation:${this.columnLocation}`);
     }
   }
 

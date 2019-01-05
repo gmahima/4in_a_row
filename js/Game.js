@@ -29,7 +29,7 @@ class Game {
       }
       if (e.key == "ArrowRight") {
         console.log('ii');
-        this.activePlayer.activeToken.moveRight(this.board.coloumns);
+        this.activePlayer.activeToken.moveRight(this.board.columns);
       }
       if (e.key == "ArrowDown") {
         console.log('iii');
