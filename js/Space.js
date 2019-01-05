@@ -19,4 +19,20 @@ class Space {
     svgSpace.setAttributeNS(null, "stroke", "none");
     document.getElementById("mask").appendChild(svgSpace);
   }
+  mark(token) {
+    this.token = token;
+  }
+  get owner() {
+    if (this.token !== null) {
+      return this.token.owner;
+    }
+    else {return null;}
+  }
+  /**
+ * Checks if there a winner on the board after each token drop.
+ * @param   {Object}    Targeted space for dropped token.
+ * @return  {boolean}   Boolean value indicating whether the game has been won (true) or not (false)
+ */
+
+
 }

@@ -23,4 +23,12 @@ class Player {
     return this.unusedTokens[0];
 
   }
+  checkTokens() {
+    if (this.unusedTokens > 0) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
