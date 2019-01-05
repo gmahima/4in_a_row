@@ -20,6 +20,13 @@ class Game {
 
 
   }
+  playToken() {
+    const spaces = this.board.spaces;
+      const tc = spaces[this.activePlayer.activeToken.columnLocation];
+      console.log(tc);
+
+
+  }
   handleKeydown(e) {
     if (this.ready == true) {
       if (e.key == "ArrowLeft") {
@@ -32,7 +39,14 @@ class Game {
         this.activePlayer.activeToken.moveRight(this.board.columns);
       }
       if (e.key == "ArrowDown") {
-        console.log('iii');
+        console.log(`${this.playToken()} hi`);
+        if (this.playToken() != undefined) {
+          console.log("hi");
+          this.ready = false;
+          space.token = this.activePlayer.activeToken;
+          this.activePlayer.activeToken.drop(this.playToken(), this.ready = true);
+        }
+
       }
     }
 

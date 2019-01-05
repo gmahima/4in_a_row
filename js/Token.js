@@ -46,6 +46,18 @@ console.log(`columnLocation:${this.columnLocation}`);
       console.log(`columnLocation:${this.columnLocation}`);
     }
   }
+  drop(target, reset) {
+      /**
+   * Drops html token into targeted board space.
+   * @param   {Object}   target - Targeted space for dropped token.
+   * @param   {function} reset  - The reset function to call after the drop animation has completed.
+   */
+   this.dropped = true;
+   $(this.htmlToken).animate({
+    top: (target.y * target.diameter)
+   }, 750, 'easeOutBounce', reset);
+
+  }
 
 
 }
