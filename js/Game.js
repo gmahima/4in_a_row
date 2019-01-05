@@ -23,13 +23,16 @@ class Game {
   handleKeydown(e) {
     if (this.ready == true) {
       if (e.key == "ArrowLeft") {
-console.log('i');
+        console.log('i');
+        this.activePlayer.activeToken.moveLeft();
+
       }
       if (e.key == "ArrowRight") {
-console.log('ii');
+        console.log('ii');
+        this.activePlayer.activeToken.moveRight(this.board.coloumns);
       }
       if (e.key == "ArrowDown") {
-console.log('iii');
+        console.log('iii');
       }
     }
 
